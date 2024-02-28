@@ -105,7 +105,7 @@ def main_video_page():
     
     st.title(search_result)
     _, container, _ = st.columns([1, 5, 1])
-    video_path = "./voicevox/result/output_with_srt.mp4"
+    video_path = "/tmp/output_with_srt.mp4"
     container.video(video_path)
     
     tab1, tab2, tab3, tab4 = st.tabs(["Beginning", "Development", "Turn", "Resolution"])
