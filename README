@@ -1,0 +1,16 @@
+## 必要なライブラリ
+budoux, moviepy, numpy, openai, Pillow, pydub, pysrt, requests, srt, streamlit, voicevox
+
+
+## 起動方法
+はじめに、voicevoxディレクトリに移動し、
+export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$(pwd)
+を実行します。
+
+その後、
+streamlit run app.py
+を実行すると、アプリが起動します。
+
+
+##　使い方
+"OpenAI API key"の空欄に、自分のAPIキーを入力することで、動作可能になります。
