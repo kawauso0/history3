@@ -70,7 +70,10 @@ import tempfile
 
 def pyopenjtalk_synthesize(text, path, speed=1.0):
     # 音声合成を実行
-x, sr = pyopenjtalk.tts(text, dic="voicevox/open_jtalk_dic_utf_8-1.11")
+    # 環境変数に辞書のパスを設定
+    DICT_PATH = "voicevox/open_jtalk_dic_utf_8-1.11"
+    os.environ["OPEN_JTALK_DIC_PATH"] = DICT_PATH
+    x, sr = pyopenjtalk.tts(text)
     wavfile.write(path, sr, x.astype(np.int16))
     # 再生時間を計算
     time = len(x) / sr
